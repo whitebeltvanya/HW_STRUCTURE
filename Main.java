@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import ru.netology.service.CustomsService;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,13 +19,9 @@ public class Main {
             else break;
         }
 
-        System.out.print("Размер пошлины (в руб.) составит:" +calcTax(priceRub, weightKg));
+        System.out.print("Размер пошлины (в руб.) составит:" + CustomsService.calcTax(priceRub, weightKg));
 
     }
 
-    //calc incoming tax
-    public static int calcTax (int priceRub, int weightKg){
-            return priceRub/100 + weightKg*100;
-    }
 
 }
